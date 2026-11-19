@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the content vertically and horizontally */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Shared badge styling */
+.small,
+.big {
+  color: #fff;
+  border-radius: 4px;
+  font-family: Georgia, serif;
+}
+
+/* Default (Large screens): Show BIG, hide SMALL */
+.big {
+  display: inline-block;
+  background-color: #76c900; /* Bright green */
+  padding: 16px 28px;
+  font-size: 2.5rem;
+}
+
+.small {
+  display: none;
+  background-color: #ff5733; /* Red-orange */
+  padding: 10px 18px;
+  font-size: 1rem;
+}
+
+/* Small screens (e.g., <= 600px): Hide BIG, show SMALL */
+@media only screen and (max-width: 600px) {
+  .big {
+    display: none;
+  }
+
+  .small {
+    display: inline-block;
+  }
+}
